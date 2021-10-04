@@ -11,9 +11,9 @@ from transformers import AutoTokenizer
 #####
 class AspectExtractionDataset(Dataset):
     # Static constant variable
-    LABEL2INDEX = {'I-SENTIMENT': 0, 'O': 1, 'I-ASPECT': 2, 'B-SENTIMENT': 3, 'B-ASPECT': 4}
-    INDEX2LABEL = {0: 'I-SENTIMENT', 1: 'O', 2: 'I-ASPECT', 3: 'B-SENTIMENT', 4: 'B-ASPECT'}
-    NUM_LABELS = 5
+    INDEX2LABEL = {0: 'positif', 1: 'negatif', 2: 'netral'}
+    LABEL2INDEX = {'positif': 0, 'negatif': 1, 'netral': 2}
+    NUM_LABELS = 3
     
     def load_dataset(self, path):
         # Read file
